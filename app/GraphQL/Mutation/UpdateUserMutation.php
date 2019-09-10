@@ -19,10 +19,22 @@ class UpdateUserMutation extends Mutation
         'name' => 'UpdateUser'
     ];
 
+    /*
+    *   Declare type users   
+    *
+    */
+
     public function type()
     {
         return GraphQL::type('users');
     }
+
+     /*
+    *   Declare the arguments required to create a new user
+    *   arguments are id and name 
+    *   id - is used to find the user
+    *   name - is the field that can be updated
+    */
 
     public function args()
     {
